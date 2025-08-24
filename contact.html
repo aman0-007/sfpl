@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Global Freight Solutions</title>
+    <meta name="description" content="Get in touch with Global Freight Solutions for all your freight forwarding needs. Contact us for quotes, inquiries, and expert logistics consultation.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="public/WhatsApp%20Image%202025-08-19%20at%2020.13.43_72b1773e.jpg" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="public/WhatsApp Image 2025-08-19 at 20.13.43_72b1773e.jpg" alt="Company Logo" class="logo-img">
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <div class="nav-item-wrapper">
+                            <a href="services.html" class="nav-link">Our Services</a>
+                            <button class="dropdown-arrow" aria-label="Toggle services menu"></button>
+                        </div>
+                        <div class="dropdown-menu">
+                            <a href="services.html#air-freight" class="dropdown-link">Air Freight</a>
+                            <a href="services.html#sea-freight" class="dropdown-link">Sea Freight</a>
+                            <a href="services.html#import-clearance" class="dropdown-link">Import Clearance</a>
+                            <a href="services.html#custom-house" class="dropdown-link">Custom House Agents</a>
+                            <a href="services.html#export-shipments" class="dropdown-link">Export Shipments</a>
+                            <a href="services.html#procurement" class="dropdown-link">Procurement of Licenses</a>
+                            <a href="services.html#drawback" class="dropdown-link">Drawback/Refund Claims</a>
+                            <a href="services.html#liaison" class="dropdown-link">Liaison Work DGFT</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="clients.html" class="nav-link">Clients</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link active">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="page-header-bg">
+                <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop" alt="Contact Us Background">
+            </div>
+            <div class="container">
+                <div class="page-header-content">
+                    <div class="breadcrumb">
+                        <a href="index.html">Home</a> / <span>Contact Us</span>
+                    </div>
+                    <h1>Contact Global Freight Solutions</h1>
+                    <p>Get in touch with our logistics experts for personalized freight forwarding solutions. We're here to help you navigate global trade with confidence.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form and Info -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-content-wrapper">
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <h2>Get Your Free Quote</h2>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Service Required *</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Select a service</option>
+                                    <option value="air-freight">Air Freight</option>
+                                    <option value="sea-freight">Sea Freight</option>
+                                    <option value="import-clearance">Import Clearance</option>
+                                    <option value="custom-house">Custom House Agents</option>
+                                    <option value="export-shipments">Export Shipments</option>
+                                    <option value="procurement">Procurement of Licenses</option>
+                                    <option value="drawback">Drawback/Refund Claims</option>
+                                    <option value="liaison">Liaison Work DGFT</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="origin">Origin Country</label>
+                                    <input type="text" id="origin" name="origin">
+                                </div>
+                                <div class="form-group">
+                                    <label for="destination">Destination Country</label>
+                                    <input type="text" id="destination" name="destination">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message/Requirements *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Please describe your freight forwarding requirements, cargo details, timeline, and any specific needs..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Send Inquiry</button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <h2>Get in Touch</h2>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Phone">
+                                </div>
+                                <div class="contact-text">
+                                    <h3>Phone</h3>
+                                    <p>+1 (555) 123-4567</p>
+                                    <p>+1 (555) 123-4568</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Email">
+                                </div>
+                                <div class="contact-text">
+                                    <h3>Email</h3>
+                                    <p>info@globalfreight.com</p>
+                                    <p>quotes@globalfreight.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Address">
+                                </div>
+                                <div class="contact-text">
+                                    <h3>Address</h3>
+                                    <p>123 Logistics Avenue<br>Trade City, TC 12345<br>United States</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Hours">
+                                </div>
+                                <div class="contact-text">
+                                    <h3>Business Hours</h3>
+                                    <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                                    <p>Saturday: 9:00 AM - 2:00 PM</p>
+                                    <p>Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="emergency-contact">
+                            <h3>24/7 Emergency Support</h3>
+                            <p>For urgent shipments and emergency logistics support:</p>
+                            <p><strong>Emergency Hotline: +1 (555) 911-SHIP</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <div class="container">
+                <h2>Our Location</h2>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <img src="https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop" alt="Office Location Map">
+                        <div class="map-overlay">
+                            <h3>Visit Our Office</h3>
+                            <p>123 Logistics Avenue, Trade City, TC 12345</p>
+                            <a href="#" class="btn-secondary">Get Directions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Office Locations -->
+        <section class="office-locations">
+            <div class="container">
+                <h2>Global Offices</h2>
+                <div class="offices-grid">
+                    <div class="office-card">
+                        <div class="office-image">
+                            <img src="https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="New York Office">
+                        </div>
+                        <h3>New York, USA</h3>
+                        <p>123 Logistics Avenue<br>Trade City, TC 12345</p>
+                        <p>Phone: +1 (555) 123-4567</p>
+                        <p>Email: ny@globalfreight.com</p>
+                    </div>
+                    <div class="office-card">
+                        <div class="office-image">
+                            <img src="https://images.pexels.com/photos/1427107/pexels-photo-1427107.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="London Office">
+                        </div>
+                        <h3>London, UK</h3>
+                        <p>456 Freight Street<br>London, LN1 2AB</p>
+                        <p>Phone: +44 20 1234 5678</p>
+                        <p>Email: london@globalfreight.com</p>
+                    </div>
+                    <div class="office-card">
+                        <div class="office-image">
+                            <img src="https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Singapore Office">
+                        </div>
+                        <h3>Singapore</h3>
+                        <p>789 Shipping Boulevard<br>Singapore 123456</p>
+                        <p>Phone: +65 6123 4567</p>
+                        <p>Email: singapore@globalfreight.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>How quickly can you provide a quote?</h3>
+                        <p>We typically provide detailed quotes within 2-4 hours during business hours. For urgent requests, we can provide preliminary quotes within 30 minutes.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do you handle dangerous goods?</h3>
+                        <p>Yes, we are certified to handle dangerous goods shipments by air and sea. Our team is trained in IATA and IMDG regulations for safe transportation.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can you provide door-to-door service?</h3>
+                        <p>Absolutely! We offer comprehensive door-to-door services including pickup, transportation, customs clearance, and final delivery to your destination.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What tracking options do you provide?</h3>
+                        <p>We provide real-time tracking through our online portal, email updates, and SMS notifications. You'll always know where your shipment is.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="public/WhatsApp Image 2025-08-19 at 20.13.43_72b1773e.jpg" alt="Global Freight Solutions" class="footer-logo-img">
+                        <h3>Global Freight Solutions</h3>
+                        <p>Your trusted partner in international logistics and freight forwarding services worldwide.</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="clients.html">Clients</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#air-freight">Air Freight</a></li>
+                        <li><a href="services.html#sea-freight">Sea Freight</a></li>
+                        <li><a href="services.html#import-clearance">Import Clearance</a></li>
+                        <li><a href="services.html#custom-house">Custom House Agents</a></li>
+                        <li><a href="services.html#export-shipments">Export Services</a></li>
+                        <li><a href="services.html#procurement">License Procurement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-item-footer">
+                        <strong>Email:</strong>
+                        <p>info@globalfreight.com</p>
+                        <p>quotes@globalfreight.com</p>
+                    </div>
+                    <div class="contact-item-footer">
+                        <strong>Phone:</strong>
+                        <p>+1 (555) 123-4567</p>
+                        <p>Emergency: +1 (555) 911-SHIP</p>
+                    </div>
+                    <div class="contact-item-footer">
+                        <strong>Address:</strong>
+                        <p>123 Logistics Avenue<br>Trade City, TC 12345<br>United States</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Global Freight Solutions. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#sitemap">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/contact.js"></script>
+</body>
+</html>
