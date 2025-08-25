@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Global Freight Solutions</title>
+    <meta name="description" content="Admin dashboard for managing Global Freight Solutions inquiries and operations.">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="styles/admin.css">
+    <link rel="icon" href="../public/WhatsApp%20Image%202025-08-19%20at%2020.13.43_72b1773e.jpg" type="image/x-icon">
+</head>
+<body class="admin-body">
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="admin-nav-container">
+            <div class="admin-logo-section">
+                <img src="../public/WhatsApp Image 2025-08-19 at 20.13.43_72b1773e.jpg" alt="Global Freight Solutions" class="admin-nav-logo">
+                <div class="admin-title">
+                    <h2>Admin Dashboard</h2>
+                    <span>Global Freight Solutions</span>
+                </div>
+            </div>
+            
+            <nav class="admin-nav">
+                <ul class="admin-nav-menu">
+                    <li class="admin-nav-item">
+                        <a href="#dashboard" class="admin-nav-link active" data-section="dashboard">
+                            📊 Dashboard
+                        </a>
+                    </li>
+                    <li class="admin-nav-item">
+                        <a href="#inquiries" class="admin-nav-link" data-section="inquiries">
+                            📧 Inquiries
+                        </a>
+                    </li>
+                    <li class="admin-nav-item">
+                        <a href="#analytics" class="admin-nav-link" data-section="analytics">
+                            📈 Analytics
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="admin-user-section">
+                <div class="admin-user-info">
+                    <span class="admin-user-name">Admin User</span>
+                    <span class="admin-user-role">Administrator</span>
+                </div>
+                <div class="admin-user-actions">
+                    <button class="admin-user-btn" id="userMenuBtn">
+                        <span class="user-avatar">👤</span>
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <div class="admin-user-dropdown" id="userDropdown">
+                        <a href="#profile" class="dropdown-item">👤 Profile</a>
+                        <a href="#settings" class="dropdown-item">⚙️ Settings</a>
+                        <hr class="dropdown-divider">
+                        <a href="#logout" class="dropdown-item logout-item" id="logoutBtn">🚪 Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <!-- Dashboard Section -->
+        <section id="dashboard-section" class="admin-section active">
+            <div class="admin-container">
+                <div class="section-header">
+                    <h1>Dashboard Overview</h1>
+                    <p>Welcome to your admin dashboard. Here's a summary of recent activity.</p>
+                </div>
+                
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📧</div>
+                        <div class="stat-content">
+                            <h3 id="totalInquiries">24</h3>
+                            <p>Total Inquiries</p>
+                            <span class="stat-change positive">+12% this month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">⏳</div>
+                        <div class="stat-content">
+                            <h3 id="pendingInquiries">8</h3>
+                            <p>Pending Inquiries</p>
+                            <span class="stat-change neutral">3 urgent</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-content">
+                            <h3 id="resolvedInquiries">16</h3>
+                            <p>Resolved This Month</p>
+                            <span class="stat-change positive">+8% vs last month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-content">
+                            <h3 id="avgResponseTime">2.4h</h3>
+                            <p>Avg Response Time</p>
+                            <span class="stat-change positive">-15min improvement</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Recent Activity -->
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Recent Inquiries</h3>
+                            <a href="#inquiries" class="view-all-btn" data-section="inquiries">View All</a>
+                        </div>
+                        <div class="recent-inquiries" id="recentInquiries">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Service Requests</h3>
+                            <span class="card-subtitle">By Category</span>
+                        </div>
+                        <div class="service-breakdown">
+                            <div class="service-item">
+                                <span class="service-name">Air Freight</span>
+                                <div class="service-bar">
+                                    <div class="service-progress" style="width: 35%"></div>
+                                </div>
+                                <span class="service-count">35%</span>
+                            </div>
+                            <div class="service-item">
+                                <span class="service-name">Sea Freight</span>
+                                <div class="service-bar">
+                                    <div class="service-progress" style="width: 28%"></div>
+                                </div>
+                                <span class="service-count">28%</span>
+                            </div>
+                            <div class="service-item">
+                                <span class="service-name">Import Clearance</span>
+                                <div class="service-bar">
+                                    <div class="service-progress" style="width: 22%"></div>
+                                </div>
+                                <span class="service-count">22%</span>
+                            </div>
+                            <div class="service-item">
+                                <span class="service-name">Other Services</span>
+                                <div class="service-bar">
+                                    <div class="service-progress" style="width: 15%"></div>
+                                </div>
+                                <span class="service-count">15%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inquiries Section -->
+        <section id="inquiries-section" class="admin-section">
+            <div class="admin-container">
+                <div class="section-header">
+                    <h1>Contact Inquiries</h1>
+                    <p>Manage and respond to customer inquiries from the contact form.</p>
+                </div>
+                
+                <!-- Filters and Search -->
+                <div class="inquiries-controls">
+                    <div class="search-box">
+                        <input type="text" id="searchInquiries" placeholder="Search inquiries..." class="search-input">
+                        <button class="search-btn">🔍</button>
+                    </div>
+                    
+                    <div class="filter-controls">
+                        <select id="statusFilter" class="filter-select">
+                            <option value="">All Status</option>
+                            <option value="new">New</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="resolved">Resolved</option>
+                        </select>
+                        
+                        <select id="serviceFilter" class="filter-select">
+                            <option value="">All Services</option>
+                            <option value="air-freight">Air Freight</option>
+                            <option value="sea-freight">Sea Freight</option>
+                            <option value="import-clearance">Import Clearance</option>
+                            <option value="custom-house">Custom House</option>
+                            <option value="export-shipments">Export Shipments</option>
+                            <option value="other">Other</option>
+                        </select>
+                        
+                        <button class="refresh-btn" id="refreshInquiries">🔄 Refresh</button>
+                    </div>
+                </div>
+                
+                <!-- Inquiries Table -->
+                <div class="inquiries-table-container">
+                    <table class="inquiries-table" id="inquiriesTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Date</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Service</th>
+                                <th>Status</th>
+                                <th>Priority</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="inquiriesTableBody">
+                            <!-- Will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="pagination" id="inquiriesPagination">
+                    <button class="pagination-btn" id="prevPage">← Previous</button>
+                    <div class="pagination-info">
+                        <span id="pageInfo">Page 1 of 3</span>
+                    </div>
+                    <button class="pagination-btn" id="nextPage">Next →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analytics Section -->
+        <section id="analytics-section" class="admin-section">
+            <div class="admin-container">
+                <div class="section-header">
+                    <h1>Analytics & Reports</h1>
+                    <p>Detailed insights into inquiry patterns and performance metrics.</p>
+                </div>
+                
+                <div class="analytics-grid">
+                    <div class="analytics-card">
+                        <h3>Monthly Inquiry Trends</h3>
+                        <div class="chart-placeholder">
+                            <div class="chart-bars">
+                                <div class="chart-bar" style="height: 60%"><span>Jan</span></div>
+                                <div class="chart-bar" style="height: 75%"><span>Feb</span></div>
+                                <div class="chart-bar" style="height: 45%"><span>Mar</span></div>
+                                <div class="chart-bar" style="height: 85%"><span>Apr</span></div>
+                                <div class="chart-bar" style="height: 70%"><span>May</span></div>
+                                <div class="chart-bar" style="height: 90%"><span>Jun</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="analytics-card">
+                        <h3>Response Time Analysis</h3>
+                        <div class="metrics-list">
+                            <div class="metric-item">
+                                <span class="metric-label">Average Response Time</span>
+                                <span class="metric-value">2.4 hours</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">Fastest Response</span>
+                                <span class="metric-value">15 minutes</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">SLA Compliance</span>
+                                <span class="metric-value">94%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="analytics-card">
+                        <h3>Top Countries</h3>
+                        <div class="country-list">
+                            <div class="country-item">
+                                <span class="country-name">🇺🇸 United States</span>
+                                <span class="country-count">45%</span>
+                            </div>
+                            <div class="country-item">
+                                <span class="country-name">🇬🇧 United Kingdom</span>
+                                <span class="country-count">22%</span>
+                            </div>
+                            <div class="country-item">
+                                <span class="country-name">🇩🇪 Germany</span>
+                                <span class="country-count">18%</span>
+                            </div>
+                            <div class="country-item">
+                                <span class="country-name">🇨🇦 Canada</span>
+                                <span class="country-count">15%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Inquiry Detail Modal -->
+    <div class="modal" id="inquiryModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Inquiry Details</h3>
+                <button class="modal-close" id="modalClose">×</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Will be populated by JavaScript -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="modalCancel">Close</button>
+                <button class="btn-primary" id="modalSave">Update Status</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/admin-dashboard.js"></script>
+</body>
+</html>
